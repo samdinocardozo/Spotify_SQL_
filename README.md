@@ -51,14 +51,18 @@ SELECT track
 FROM spotify
 WHERE stream > 1000000000;
 ```
-__OUTPUT:__ ![Query Output](images/1_query.png)
+__OUTPUT:__ 
+
+![Query Output](images/1_query.png)
 ### 2. List all albums along with their respective artists.
 
 ```sql
 SELECT DISTINCT album, artist
 FROM spotify;
 ```
-__OUTPUT:__ ![Query Output](images/2_query.png)
+__OUTPUT:__ 
+
+![Query Output](images/2_query.png)
 
 ### 3. Get the total number of comments for tracks where `licensed = TRUE`.
 
@@ -78,7 +82,9 @@ SELECT *
 FROM spotify
 WHERE album_type = 'single';
 ```
-__OUTPUT:__ ![Query Output](images/4_query.png)
+__OUTPUT:__ 
+
+![Query Output](images/4_query.png)
 
 ### 5. Count the total number of tracks by each artist.
 
@@ -89,7 +95,9 @@ FROM spotify
 GROUP BY artist
 ORDER BY total_no_of_songs DESC;
 ```
-__OUTPUT:__ ![Query Output](images/5_query.png)
+__OUTPUT:__ 
+
+![Query Output](images/5_query.png)
 
 ---
 
@@ -104,7 +112,9 @@ FROM spotify
 GROUP BY album
 ORDER BY average_danceability DESC;
 ```
-__OUTPUT:__ ![Query Output](images/6_query.png)
+__OUTPUT:__ 
+
+![Query Output](images/6_query.png)
 
 ### 7. Find the top 5 tracks with the highest energy values.
 
@@ -131,7 +141,9 @@ WHERE official_video = 'true'
 GROUP BY track
 ORDER BY total_views DESC;
 ```
-__OUTPUT:__ ![Query Output](images/8_query.png)
+__OUTPUT:__ 
+
+![Query Output](images/8_query.png)
 
 ### 9. For each album, calculate the total views of all associated tracks.
 
@@ -142,7 +154,9 @@ FROM spotify
 GROUP BY album
 ORDER BY total_views DESC;
 ```
-__OUTPUT:__ ![Query Output](images/9_query.png)
+__OUTPUT:__ 
+
+![Query Output](images/9_query.png)
 
 ### 10. Retrieve the track names that have been streamed on Spotify more than YouTube.
 
@@ -172,7 +186,9 @@ WHERE streamed_on_youtube < streamed_on_spotify
 
 ORDER BY streamed_on_spotify DESC;
 ```
-__OUTPUT:__ ![Query Output](images/10_query.png)
+__OUTPUT:__ 
+
+![Query Output](images/10_query.png)
 
 ---
 
@@ -198,7 +214,9 @@ SELECT *
 FROM ranking_artist
 WHERE ranking <= 3;
 ```
-__OUTPUT:__ ![Query Output](images/11_query.png)
+__OUTPUT:__ 
+
+![Query Output](images/11_query.png)
 
 ### 12. Find tracks where the liveness score is above the average.
 
@@ -212,7 +230,9 @@ WHERE liveness > (
     FROM spotify
 );
 ```
-__OUTPUT:__ ![Query Output](images/12_query.png)
+__OUTPUT:__ 
+
+![Query Output](images/12_query.png)
 
 ### 13. Calculate the difference between the highest and lowest energy values for tracks in each album.
 
@@ -233,7 +253,9 @@ SELECT track,
 FROM cal_energy
 ORDER BY calculated_difference DESC;
 ```
-__OUTPUT:__ ![Query Output](images/13_query.png)
+__OUTPUT:__ 
+
+![Query Output](images/13_query.png)
 
 ### 14. Find tracks where the energy-to-liveness ratio is greater than 1.2.
 
@@ -244,7 +266,9 @@ FROM spotify
 WHERE energy / liveness > 1.2
 ORDER BY energy_liveness_ratio;
 ```
-__OUTPUT:__ ![Query Output](images/14_query.png)
+__OUTPUT:__ 
+
+![Query Output](images/14_query.png)
 
 ### 15. Calculate the cumulative sum of likes for tracks ordered by the number of views.
 
@@ -259,7 +283,9 @@ FROM spotify
 GROUP BY track, views, likes
 ORDER BY views DESC;
 ```
-__OUTPUT:__ ![Query Output](images/15_query.png)
+__OUTPUT:__ 
+
+![Query Output](images/15_query.png)
 
 ---
 
