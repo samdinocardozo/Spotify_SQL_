@@ -43,6 +43,16 @@ It combines **music characteristics, artist and album information, streaming dat
 - Energy-to-Liveness ratio
 - Most-played platform classification
 
+## 🧹 Data Cleaning & Preparation
+
+Before importing the dataset into PostgreSQL, the following changes were made:
+
+- **2 rows were removed** because their track duration was `0`.
+- `Likes`, `Views`, and `Comments` were converted to **numeric values** to prevent data-type and import issues.
+- **Single quotes (`'`) were removed from the data** where necessary because they were causing issues during PostgreSQL data import.
+
+These changes were made to improve data consistency and ensure successful database import and SQL analysis.
+
 ## 🎯 Purpose
 
 The dataset is used in this project to practice SQL analysis by answering questions related to:
